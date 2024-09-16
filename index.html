@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Resources/logos/logo.png" type="image/png" />
+    <title>FoodMama</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/5f092a7ab8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!--Nav bar and Website name logo-->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <img src="Resources/logos/logo.png" class="w-7" />
+          <a>FoodMama</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a onclick="loadFood('Potato')">Potato</a></li>
+              <li><a onclick="loadFood('Soup')">Soup</a></li>
+              <li><a onclick="loadFood('Chicken')">Chicken</a></li>
+              <li><a onclick="loadFood('Beef')">Beef</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a onclick="loadFood('Potato')">Potato</a></li>
+            <li><a onclick="loadFood('Soup')">Soup</a></li>
+            <li><a onclick="loadFood('Chicken')">Chicken</a></li>
+            <li><a onclick="loadFood('Beef')">Beef</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--Carousel Part-->
+
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(Resources/banner1.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center py-10">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <p class="mb-5">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(Resources/banner2.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <p class="mb-5">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(Resources/banner3.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <p class="mb-5">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -tranate-y-1/2 transform justify-between"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>sl
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <div
+            class="hero"
+            style="background-image: url(Resources/banner4.jpg)"
+          >
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                <p class="mb-5">
+                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                  assumenda excepturi exercitationem quasi. In deleniti eaque
+                  aut repudiandae et a id nisi.
+                </p>
+                <button class="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+      <!-- result  -->
+      <section>
+        <div
+          id="result-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14"
+        ></div>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+
+      <dialog id="show_meal_details" class="modal modal-bottom sm:modal-middle">
+        
+        <div class="modal-box w-11/12 max-w-5xl">
+          
+          <div class="flex m-5" id="meal-details-cotainer"></div>
+
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <div class="flex mt-5">
+        <!--faq-->
+        <div class="join join-vertical w-1/2 p-5">
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Click to open this one and close others
+            </div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+        </div>
+        <!--rating-->
+        <div class="p-5">
+          <h2>Please Rat Us</h2>
+          <div class="rating gap-1 p-5">
+            <input
+              type="radio"
+              name="rating-3"
+              class="mask mask-heart bg-red-400"
+            />
+            <input
+              type="radio"
+              name="rating-3"
+              class="mask mask-heart bg-orange-400"
+              checked="checked"
+            />
+            <input
+              type="radio"
+              name="rating-3"
+              class="mask mask-heart bg-yellow-400"
+            />
+            <input
+              type="radio"
+              name="rating-3"
+              class="mask mask-heart bg-lime-400"
+            />
+            <input
+              type="radio"
+              name="rating-3"
+              class="mask mask-heart bg-green-400"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <footer class="footer bg-base-200 text-base-content p-10">
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Bangla Food</a>
+          <a class="link link-hover">Chinice Food</a>
+          <a class="link link-hover">Indian Food</a>
+          <a class="link link-hover">Thai Food</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+          <a class="link link-hover">Copyright</a>
+        </nav>
+        <form>
+          <h6>Social Media</h6>
+          <div class="flex gap-2">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          </div>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-80">
+            <label class="label">
+              <span class="label-text">Enter your email address</span>
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item"
+              />
+              <button class="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+    </footer>
+  </body>
+</html>
+
+<script src="Script/Food.js"></script>
