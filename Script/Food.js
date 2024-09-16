@@ -66,9 +66,17 @@ const showMealDetails = meal => {
          <a href="${meal.strYoutube}" target="_blank">${meal.strYoutube} </a> 
       </span></p>
       </div>    `
+
+      const modal = document.getElementById('show_meal_details');
+          modal.classList.toggle('hidden');
     // <button class="btn" onclick="show_meal_details.showModal()">open modal</button>
-    show_meal_details.showModal();    
+   // show_meal_details.showModal();    
 }
+
+function toggleModal() {
+    const modal = document.getElementById('show_meal_details');
+    modal.classList.toggle('hidden');
+  }
 
 console.log('1');
 console.log('2');
