@@ -2,6 +2,9 @@ const loadFood = (mealname) => {
     //let inputText = document.getElementById("search-input").value;
     let mymealname = mealname || ""; 
     
+    document.getElementById('MySearchingCategoty').innerText = "Category: "+ mymealname;;
+    
+
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mymealname}`
     
     fetch(url)
@@ -13,7 +16,8 @@ const loadFood = (mealname) => {
 loadFood();
 
 const showMeals = (meals) => {
-    // console.log('Data is: ', meals);
+
+
     let container = document.getElementById("result-container");
     container.innerHTML = '';
     meals.forEach(meal => {
@@ -28,7 +32,7 @@ const showMeals = (meals) => {
                 <h2 class="card-title">${meal.strMeal}</h2>
                 <p title="${meal.strInstructions}" >${meal.strInstructions.slice(0,200)}...</p>
                 <div class="card-actions justify-end">
-                    <button onclick="handleShowDetails(${meal.idMeal})" class="btn btn-primary">Show Details</button>
+                    <button onclick="handleShowDetails(${meal.idMeal})" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">See Details</button>
                 </div>
             </div>   
         `;
