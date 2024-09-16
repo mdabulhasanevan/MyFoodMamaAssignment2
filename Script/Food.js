@@ -1,7 +1,9 @@
 const loadFood = (mealname) => {
     //let inputText = document.getElementById("search-input").value;
     let mymealname = mealname || ""; 
+    
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mymealname}`
+    
     fetch(url)
         .then(res => res.json())
         .then(data => showMeals(data.meals))
